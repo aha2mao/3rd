@@ -23,6 +23,35 @@ window.thirdPartyNative = (function () {
 
   loadScript(`https://${urldomain}/jssdk/js/indexnew.js`, () => {
     console.log('indexnew.js done')
+
+    var u = navigator.userAgent;
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    var tmpTag = false;
+    if (urldomain == "tftb.sczwfw.gov.cn:8085/jmopen") {
+      tmpTag = true;
+    }
+
+    if (isiOS) {
+      if (tmpTag == true) {
+        loadScript(`https://${urldomain}/jssdk/cordova_ios.js`)
+      } else {
+        loadScript(`http://${urldomain}/jssdk/cordova_ios.js`)
+      }
+    } else {
+      if (u.substring(u.length - 5, u.length) == '1.4.2') {
+        if (tmpTag == true) {
+          loadScript(`https://${urldomain}/jssdk/cordova_android1.4.2.js`)
+        } else {
+          loadScript(`http://${urldomain}/jssdk/cordova_android1.4.2.js`)
+        }
+      } else {
+        if (tmpTag == true) {
+          loadScript(`https://${urldomain}/jssdk/cordova_android.js`)
+        } else {
+          loadScript(`http://${urldomain}/jssdk/cordova_android.js`)
+        }
+      }
+    }
   });
   // loadScript(`https://${urldomain}/jssdk/jmportal_SDK.js`, () => {
   //   console.log('jmportal_SDK done')
