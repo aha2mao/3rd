@@ -24,9 +24,9 @@ window.thirdPartyNative = (function () {
   loadScript(`https://${urldomain}/jssdk/js/indexnew.js`, () => {
     console.log('indexnew.js done')
   });
-  loadScript(`https://${urldomain}/jssdk/jmportal_SDK.js`, () => {
-    console.log('jmportal_SDK done')
-  });
+  // loadScript(`https://${urldomain}/jssdk/jmportal_SDK.js`, () => {
+  //   console.log('jmportal_SDK done')
+  // });
 
   // 引入 天府通办 jssdk
   // const script = document.createElement('script');
