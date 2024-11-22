@@ -1,4 +1,4 @@
-const loadScript = (src, callback) => {
+const loadScript = (src, callback = () => { }) => {
   const script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = src;
