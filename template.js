@@ -5,17 +5,18 @@ window.thirdPartyNative = (function () {
   const isMyApp = window.SMGNativeJS.isMyApp('xxxxx'); // true / false
 
   // 引入 天府通办 jssdk
-  // const script = document.createElement('script');
-  // script.type = 'text/javascript';
-  // script.src = '//tftb.sczwfw.gov.cn/jssdk/index.js';
-  // document.head.appendChild(script);
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = '//tftb.sczwfw.gov.cn/jssdk/index.js';
+  script.async = true;
+  document.head.appendChild(script);
 
   // // TODO: async load
-  // script.onload = () => {
-  //   console.log('JSSDK-API 加载成功');
-  //   console.log(window.lightAppJssdk);
-  //   console.log(Object.keys(window));
-  // };
+  script.onload = () => {
+    console.log('JSSDK-API 加载成功');
+    console.log(window.lightAppJssdk);
+    console.log(Object.keys(window));
+  };
   return {
     closeView: (json, responseCallback) => {
       // todo
