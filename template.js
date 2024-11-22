@@ -16,6 +16,7 @@ const frame = document.createElement('iframe');
 frame.src = './inner.html';
 frame.style.display = 'none';
 frame.onload = function () {
+  console.log('iframe 加载成功');
   window.lightAppJssdk =
     this.contentWindow.lightAppJssdk;
   window.thirdPartyNative = (function () {
