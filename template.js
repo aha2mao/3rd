@@ -10,7 +10,12 @@ const loadScript = (src, callback) => {
   };
   document.head.appendChild(script);
 };
-window.iframeLoad = function () {
+
+
+const frame = document.createElement('iframe');
+frame.src = './inner.html';
+frame.style.display = 'none';
+frame.onload = () => {
   window.lightAppJssdk =
     document.getElementById('iframe').contentWindow.lightAppJssdk;
   window.thirdPartyNative = (function () {
@@ -76,6 +81,8 @@ window.iframeLoad = function () {
     };
   })();
 };
+document.body.appendChild(frame);
+
 
 // 业务调用
 // SMGNativeJS.commonuseTypes.closeView(
