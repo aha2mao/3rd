@@ -15,8 +15,11 @@ const loadScript = (src, callback) => {
 const frame = document.createElement('iframe');
 frame.src = './inner.html';
 frame.style.display = 'none';
+
 frame.onload = function () {
   console.log('iframe 加载成功');
+
+
   window.lightAppJssdk =
     this.contentWindow.lightAppJssdk;
   window.thirdPartyNative = (function () {
@@ -81,7 +84,18 @@ frame.onload = function () {
       // },
     };
   })();
+
+  window.SMGNativeJS = {
+    ...window.SMGNativeJS,
+    commonuseTypes: {
+      ...SMGNativeJS.commonuseTypes,
+      '3rd': {
+        ...window.thirdPartyNative,
+      },
+    },
+  };
 };
+
 document.body.appendChild(frame);
 
 
