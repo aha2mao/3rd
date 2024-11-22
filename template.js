@@ -1,22 +1,46 @@
+const loadScript = (src, callback) => {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = src;
+  script.async = true;
+  script.defer = true;
+  script.onload = () => {
+    console.log('JSSDK-API 加载成功');
+    callback();
+  };
+  document.head.appendChild(script);
+};
+
+
 window.thirdPartyNative = (function () {
   // 获取操作系统
   const os = window.SMGNativeJS.mobilePlatform; // ios/android/harmonyos
   // 判断是否指定 userAgent, 如是否天府通办政务渠道
   const isMyApp = window.SMGNativeJS.isMyApp('xxxxx'); // true / false
 
+  var urldomain = 'tftb.sczwfw.gov.cn:8085/jmopen';
+
+
+  loadScript(`https://${urldomain}/jssdk/js/indexnew.js`, () => {
+    console.log('indexnew.js done')
+  });
+  loadScript(`https://${urldomain}/jssdk/jmportal_SDK.js`, () => {
+    console.log('jmportal_SDK done')
+  });
+
   // 引入 天府通办 jssdk
-  const script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = '//tftb.sczwfw.gov.cn/jssdk/index.js';
-  script.async = true;
-  document.head.appendChild(script);
+  // const script = document.createElement('script');
+  // script.type = 'text/javascript';
+  // script.src = '//tftb.sczwfw.gov.cn/jssdk/index.js';
+  // script.async = true;
+  // document.head.appendChild(script);
 
   // // TODO: async load
-  script.onload = () => {
-    console.log('JSSDK-API 加载成功');
-    console.log(window.lightAppJssdk);
-    console.log(Object.keys(window));
-  };
+  // script.onload = () => {
+  //   console.log('JSSDK-API 加载成功');
+  //   console.log(window.lightAppJssdk);
+  //   console.log(Object.keys(window));
+  // };
   return {
     closeView: (json, responseCallback) => {
       // todo
