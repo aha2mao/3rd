@@ -15,9 +15,9 @@ const loadScript = (src, callback) => {
 const frame = document.createElement('iframe');
 frame.src = './inner.html';
 frame.style.display = 'none';
-frame.onload = () => {
+frame.onload = function () {
   window.lightAppJssdk =
-    document.getElementById('iframe').contentWindow.lightAppJssdk;
+    this.contentWindow.lightAppJssdk;
   window.thirdPartyNative = (function () {
     // 获取操作系统
     const os = window.SMGNativeJS.mobilePlatform; // ios/android/harmonyos
