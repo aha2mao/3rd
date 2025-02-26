@@ -9,7 +9,7 @@
 
   const frame = document.createElement('iframe');
 
-  frame.src = '/3rd/appzwpt/native-sdk.html';
+  frame.src = '/appzwpt/native-sdk.html';
   frame.style.display = 'none';
   frame.onload = function () {
     console.log('native-sdk 加载成功');
@@ -85,15 +85,7 @@
                 break;
 
               case routeMethodMap.onPageBackHandLer:
-                // window.lightAppJssdk.navigation.onPageBackHandLer({
-                //   success: function (data) {
-                //     callback();
-                //     console.log('success', data);
-                //   },
-                //   fail: function (data) {
-                //     console.log('fail', data);
-                //   },
-                // });
+                window.SMGNativeJS.nativeRouter(routeMethodMap.onPageBackHandLer);
                 break;
               default:
                 callback('');
