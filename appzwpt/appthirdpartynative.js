@@ -9,7 +9,7 @@
 
   const frame = document.createElement('iframe');
 
-  frame.src = '/appzwpt/native-sdk.html';
+  frame.src = '/3rd/appzwpt/native-sdk.html';
   frame.style.display = 'none';
   frame.onload = function () {
     console.log('native-sdk 加载成功');

@@ -60,11 +60,11 @@ function vt(a) {
         b.get
           ? b
           : {
-              enumerable: !0,
-              get: function () {
-                return a[f];
-              },
+            enumerable: !0,
+            get: function () {
+              return a[f];
             },
+          },
       );
     }),
     c
@@ -102,7 +102,7 @@ var Be, Er;
 function bt() {
   return (
     Er ||
-      ((Er = 1),
+    ((Er = 1),
       (Be = function () {
         if (typeof Symbol != 'function' || typeof Object.getOwnPropertySymbols != 'function') return !1;
         if (typeof Symbol.iterator == 'symbol') return !0;
@@ -192,26 +192,26 @@ function Et() {
       if (typeof S != 'function' || u.apply(S) !== f) throw new TypeError(a + S);
       for (
         var g = d(arguments, 1),
-          V,
-          I = function () {
-            if (this instanceof V) {
-              var o = S.apply(this, b(g, arguments));
-              return Object(o) === o ? o : this;
-            }
-            return S.apply(w, b(g, arguments));
-          },
-          s = c(0, S.length - g.length),
-          H = [],
-          v = 0;
+        V,
+        I = function () {
+          if (this instanceof V) {
+            var o = S.apply(this, b(g, arguments));
+            return Object(o) === o ? o : this;
+          }
+          return S.apply(w, b(g, arguments));
+        },
+        s = c(0, S.length - g.length),
+        H = [],
+        v = 0;
         v < s;
         v++
       )
         H[v] = '$' + v;
       if (
         ((V = Function('binder', 'return function (' + q(H, ',') + '){ return binder.apply(this,arguments); }')(I)),
-        S.prototype)
+          S.prototype)
       ) {
-        var r = function () {};
+        var r = function () { };
         (r.prototype = S.prototype), (V.prototype = new r()), (r.prototype = null);
       }
       return V;
@@ -251,7 +251,7 @@ function se() {
     S = function (F) {
       try {
         return w('"use strict"; return (' + F + ').constructor;')();
-      } catch (E) {}
+      } catch (E) { }
     },
     g = Object.getOwnPropertyDescriptor;
   if (g)
@@ -261,20 +261,20 @@ function se() {
       g = null;
     }
   var V = function () {
-      throw new q();
-    },
+    throw new q();
+  },
     I = g
       ? (function () {
+        try {
+          return arguments.callee, V;
+        } catch (F) {
           try {
-            return arguments.callee, V;
-          } catch (F) {
-            try {
-              return g(arguments, 'callee').get;
-            } catch (E) {
-              return V;
-            }
+            return g(arguments, 'callee').get;
+          } catch (E) {
+            return V;
           }
-        })()
+        }
+      })()
       : V,
     s = It()(),
     H = St()(),
@@ -282,8 +282,8 @@ function se() {
       Object.getPrototypeOf ||
       (H
         ? function (F) {
-            return F.__proto__;
-          }
+          return F.__proto__;
+        }
         : null),
     r = {},
     o = typeof Uint8Array == 'undefined' || !v ? a : v(Uint8Array),
@@ -364,19 +364,19 @@ function se() {
       i['%Error.prototype%'] = p;
     }
   var m = function F(E) {
-      var B;
-      if (E === '%AsyncFunction%') B = S('async function () {}');
-      else if (E === '%GeneratorFunction%') B = S('function* () {}');
-      else if (E === '%AsyncGeneratorFunction%') B = S('async function* () {}');
-      else if (E === '%AsyncGenerator%') {
-        var D = F('%AsyncGeneratorFunction%');
-        D && (B = D.prototype);
-      } else if (E === '%AsyncIteratorPrototype%') {
-        var k = F('%AsyncGenerator%');
-        k && v && (B = v(k.prototype));
-      }
-      return (i[E] = B), B;
-    },
+    var B;
+    if (E === '%AsyncFunction%') B = S('async function () {}');
+    else if (E === '%GeneratorFunction%') B = S('function* () {}');
+    else if (E === '%AsyncGeneratorFunction%') B = S('async function* () {}');
+    else if (E === '%AsyncGenerator%') {
+      var D = F('%AsyncGeneratorFunction%');
+      D && (B = D.prototype);
+    } else if (E === '%AsyncIteratorPrototype%') {
+      var k = F('%AsyncGenerator%');
+      k && v && (B = v(k.prototype));
+    }
+    return (i[E] = B), B;
+  },
     y = {
       __proto__: null,
       '%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
@@ -625,7 +625,7 @@ var Br;
 function Ot() {
   return (
     Br ||
-      ((Br = 1),
+    ((Br = 1),
       (function (a) {
         var u = nr(),
           c = se(),
@@ -711,8 +711,8 @@ function Nt() {
       (typeof Reflect == 'function' ? Reflect.getPrototypeOf : Object.getPrototypeOf) ||
       ([].__proto__ === Array.prototype
         ? function (e) {
-            return e.__proto__;
-          }
+          return e.__proto__;
+        }
         : null);
   function E(e, n) {
     if (e === 1 / 0 || e === -1 / 0 || e !== e || (e && e > -1e3 && e < 1e3) || R.call(/e/, n)) return n;
@@ -822,9 +822,9 @@ function Nt() {
       var sr = [];
       return (
         f &&
-          f.call(n, function (pe, ge) {
-            sr.push($(ge, n, !0) + ' => ' + $(pe, n));
-          }),
+        f.call(n, function (pe, ge) {
+          sr.push($(ge, n, !0) + ' => ' + $(pe, n));
+        }),
         ur('Map', c.call(n), sr, ce)
       );
     }
@@ -832,9 +832,9 @@ function Nt() {
       var yr = [];
       return (
         O &&
-          O.call(n, function (pe) {
-            yr.push($(pe, n));
-          }),
+        O.call(n, function (pe) {
+          yr.push($(pe, n));
+        }),
         ur('Set', q.call(n), yr, ce)
       );
     }
@@ -892,14 +892,14 @@ function Nt() {
     if (!e || typeof e != 'object' || !x) return !1;
     try {
       return x.call(e), !0;
-    } catch (n) {}
+    } catch (n) { }
     return !1;
   }
   function te(e) {
     if (!e || typeof e != 'object' || !T) return !1;
     try {
       return T.call(e), !0;
-    } catch (n) {}
+    } catch (n) { }
     return !1;
   }
   var Re =
@@ -933,7 +933,7 @@ function Nt() {
         return !0;
       }
       return e instanceof Map;
-    } catch (n) {}
+    } catch (n) { }
     return !1;
   }
   function tt(e) {
@@ -946,14 +946,14 @@ function Nt() {
         return !0;
       }
       return e instanceof WeakMap;
-    } catch (n) {}
+    } catch (n) { }
     return !1;
   }
   function nt(e) {
     if (!s || !e || typeof e != 'object') return !1;
     try {
       return s.call(e), !0;
-    } catch (n) {}
+    } catch (n) { }
     return !1;
   }
   function at(e) {
@@ -966,7 +966,7 @@ function Nt() {
         return !0;
       }
       return e instanceof Set;
-    } catch (n) {}
+    } catch (n) { }
     return !1;
   }
   function it(e) {
@@ -979,7 +979,7 @@ function Nt() {
         return !0;
       }
       return e instanceof WeakSet;
-    } catch (n) {}
+    } catch (n) { }
     return !1;
   }
   function ot(e) {
@@ -1175,7 +1175,7 @@ function Qr() {
       return r;
     })(),
     b = function (o) {
-      for (; o.length > 1; ) {
+      for (; o.length > 1;) {
         var i = o.pop(),
           p = i.obj[i.prop];
         if (c(p)) {
@@ -1204,16 +1204,16 @@ function Qr() {
         c(o) && !c(i) && (m = d(o, p)),
         c(o) && c(i)
           ? (i.forEach(function (y, R) {
-              if (u.call(o, R)) {
-                var t = o[R];
-                t && typeof t == 'object' && y && typeof y == 'object' ? (o[R] = r(t, y, p)) : o.push(y);
-              } else o[R] = y;
-            }),
+            if (u.call(o, R)) {
+              var t = o[R];
+              t && typeof t == 'object' && y && typeof y == 'object' ? (o[R] = r(t, y, p)) : o.push(y);
+            } else o[R] = y;
+          }),
             o)
           : Object.keys(i).reduce(function (y, R) {
-              var t = i[R];
-              return u.call(y, R) ? (y[R] = r(y[R], t, p)) : (y[R] = t), y;
-            }, m)
+            var t = i[R];
+            return u.call(y, R) ? (y[R] = r(y[R], t, p)) : (y[R] = t), y;
+          }, m)
       );
     },
     O = function (o, i) {
@@ -1236,7 +1236,7 @@ function Qr() {
       var R = o;
       if (
         (typeof o == 'symbol' ? (R = Symbol.prototype.toString.call(o)) : typeof o != 'string' && (R = String(o)),
-        p === 'iso-8859-1')
+          p === 'iso-8859-1')
       )
         return escape(R).replace(/%u[0-9a-f]{4}/gi, function (x) {
           return '%26%23' + parseInt(x.slice(2), 16) + '%3B';
@@ -1380,7 +1380,7 @@ function Bt() {
     },
     I = {},
     s = function v(r, o, i, p, m, y, R, t, l, h, A, T, P, x, G, U, M, F) {
-      for (var E = r, B = F, D = 0, k = !1; (B = B.get(I)) !== void 0 && !k; ) {
+      for (var E = r, B = F, D = 0, k = !1; (B = B.get(I)) !== void 0 && !k;) {
         var z = B.get(r);
         if (((D += 1), typeof z != 'undefined')) {
           if (z === D) throw new RangeError('Cyclic object value');
@@ -1394,11 +1394,11 @@ function Bt() {
           : E instanceof Date
             ? (E = P(E))
             : i === 'comma' &&
-              d(E) &&
-              (E = u.maybeMap(E, function (Y) {
-                return Y instanceof Date ? P(Y) : Y;
-              })),
-        E === null)
+            d(E) &&
+            (E = u.maybeMap(E, function (Y) {
+              return Y instanceof Date ? P(Y) : Y;
+            })),
+          E === null)
       ) {
         if (y) return l && !U ? l(o, g.encoder, M, 'key', x) : o;
         E = '';
@@ -1463,7 +1463,7 @@ function Bt() {
           : 'indices' in r
             ? (y = r.indices ? 'indices' : 'repeat')
             : (y = g.arrayFormat),
-        'commaRoundTrip' in r && typeof r.commaRoundTrip != 'boolean')
+          'commaRoundTrip' in r && typeof r.commaRoundTrip != 'boolean')
       )
         throw new TypeError('`commaRoundTrip` must be a boolean, or absent');
       var R = typeof r.allowDots == 'undefined' ? (r.encodeDotInKeys === !0 ? !0 : g.allowDots) : !!r.allowDots;
@@ -1644,7 +1644,7 @@ function Dt() {
           if (!v.plainObjects && u.call(Object.prototype, y) && !v.allowPrototypes) return;
           R.push(y);
         }
-        for (var t = 0; v.depth > 0 && (m = p.exec(o)) !== null && t < v.depth; ) {
+        for (var t = 0; v.depth > 0 && (m = p.exec(o)) !== null && t < v.depth;) {
           if (((t += 1), !v.plainObjects && u.call(Object.prototype, m[1].slice(1, -1)) && !v.allowPrototypes)) return;
           R.push(m[1]);
         }
@@ -1701,9 +1701,9 @@ function Dt() {
       if (I === '' || I === null || typeof I == 'undefined') return H.plainObjects ? { __proto__: null } : {};
       for (
         var v = typeof I == 'string' ? w(I, H) : I,
-          r = H.plainObjects ? { __proto__: null } : {},
-          o = Object.keys(v),
-          i = 0;
+        r = H.plainObjects ? { __proto__: null } : {},
+        o = Object.keys(v),
+        i = 0;
         i < o.length;
         ++i
       ) {
@@ -1768,7 +1768,7 @@ const Zr = dt(Ft),
     !u.isGtApp() &&
       window.thirdPartyNative &&
       ((window.thirdPartyNative.messageHandlers = {}),
-      (d = (R = window.thirdPartyNative) == null ? void 0 : R.messageHandlers));
+        (d = (R = window.thirdPartyNative) == null ? void 0 : R.messageHandlers));
     let q = 0;
     const O = {},
       w = {
@@ -1813,9 +1813,9 @@ const Zr = dt(Ft),
       let A;
       t && t.length > 0
         ? (A = function (P) {
-            p({ responseId: t, type: l, argument: P });
-          })
-        : (A = function () {});
+          p({ responseId: t, type: l, argument: P });
+        })
+        : (A = function () { });
       const T = d[l];
       T && T(h, A);
     }
@@ -1825,83 +1825,83 @@ const Zr = dt(Ft),
         .join('&');
     }
     const r = (function () {
-        return {
-          nativeRouter(t, l, h = () => {}) {
-            var x, G, U, M;
-            if ((console.log('isGtApp', le.isGtApp()), !le.isGtApp())) {
-              if (t != null && t.startsWith('http')) {
-                (G = (x = window.thirdPartyNative) == null ? void 0 : x.handler) == null ||
-                  G.call(x, 'gt4://taxapp/commonService/openView', { url: t, title: l.title }, h);
-                return;
-              }
-              (M = (U = window.thirdPartyNative) == null ? void 0 : U.handler) == null ||
-                M.call(U, `gt4://taxapp${t.replace(/^gt4:\/\/taxapp/, '')}`, l, h);
+      return {
+        nativeRouter(t, l, h = () => { }) {
+          var x, G, U, M;
+          if ((console.log('isGtApp', le.isGtApp()), !le.isGtApp())) {
+            if (t != null && t.startsWith('http')) {
+              (G = (x = window.thirdPartyNative) == null ? void 0 : x.handler) == null ||
+                G.call(x, 'gt4://taxapp/commonService/openView', { url: t, title: l.title }, h);
               return;
             }
-            const A = v(l);
-            let T = t;
-            if (A)
-              if (t.indexOf('#') !== -1) {
-                const F = t.indexOf('#'),
-                  E = t.substring(0, F),
-                  B = t.substring(F);
-                T = E.indexOf('?') === -1 ? `${E}?${A}` + B : `${E}&${A}` + B;
-              } else T = t.indexOf('?') === -1 ? `${t}?${A}` : `${t}&${A}`;
-            V('nativeRouter', { data: T }, h);
-          },
-          nativeSaveData(t, l) {
-            this.nativeRouter('/commonService/nativeSaveData', t, l);
-          },
-          nativeGetData(t, l) {
-            this.nativeRouter('/commonService/nativeGetData', t, l);
-          },
-          callPhone(t, l) {
-            this.nativeRouter('/commonService/callPhone', t, l);
-          },
-          openView(t, l) {
-            const h = {};
-            Object.assign(h, t);
-            const A = h.url;
-            delete h.url, this.nativeRouter(A, h, l);
-          },
-          closeView(t, l) {
-            this.nativeRouter('/commonService/closeView', t, l);
-          },
-          navBarTitle(t, l) {
-            this.nativeRouter('/commonService/navBarTitle', t, l);
-          },
-          navBarControl(t, l) {
-            this.nativeRouter('/commonService/navBarControl', t, l);
-          },
-          navBarHidden(t, l) {
-            this.nativeRouter('/commonService/navBarHidden', t, l);
-          },
-          navBarVisibility(t, l) {
-            this.nativeRouter('/commonService/navBarVisibility', t, l);
-          },
-          orientationChange(t, l) {
-            this.nativeRouter('/commonBiz/orientationChange', t, l);
-          },
-          getStatusBarHeight(t, l) {
-            this.nativeRouter('/commonService/getStatusBarHeight', t, l);
-          },
-          checkApp(t, l) {
-            this.nativeRouter('/commonService/checkApp', t, l);
-          },
-          openApp(t, l) {
-            this.nativeRouter('/commonService/openApp', t, l);
-          },
-          openURLWithExternalBrowser(t, l) {
-            this.nativeRouter('/commonService/openURLWithExternalBrowser', t, l);
-          },
-          nativeGetAppVersion(t, l) {
-            this.nativeRouter('/commonService/nativeGetAppVersion', t, l);
-          },
-          nativeSaveImageToGallery(t, l) {
-            this.nativeRouter('/commonService/nativeSaveImageToGallery', t, l);
-          },
-        };
-      })(),
+            (M = (U = window.thirdPartyNative) == null ? void 0 : U.handler) == null ||
+              M.call(U, `gt4://taxapp${t.replace(/^gt4:\/\/taxapp/, '')}`, l, h);
+            return;
+          }
+          const A = v(l);
+          let T = t;
+          if (A)
+            if (t.indexOf('#') !== -1) {
+              const F = t.indexOf('#'),
+                E = t.substring(0, F),
+                B = t.substring(F);
+              T = E.indexOf('?') === -1 ? `${E}?${A}` + B : `${E}&${A}` + B;
+            } else T = t.indexOf('?') === -1 ? `${t}?${A}` : `${t}&${A}`;
+          V('nativeRouter', { data: T }, h);
+        },
+        nativeSaveData(t, l) {
+          this.nativeRouter('/commonService/nativeSaveData', t, l);
+        },
+        nativeGetData(t, l) {
+          this.nativeRouter('/commonService/nativeGetData', t, l);
+        },
+        callPhone(t, l) {
+          this.nativeRouter('/commonService/callPhone', t, l);
+        },
+        openView(t, l) {
+          const h = {};
+          Object.assign(h, t);
+          const A = h.url;
+          delete h.url, this.nativeRouter(A, h, l);
+        },
+        closeView(t, l) {
+          this.nativeRouter('/commonService/closeView', t, l);
+        },
+        navBarTitle(t, l) {
+          this.nativeRouter('/commonService/navBarTitle', t, l);
+        },
+        navBarControl(t, l) {
+          this.nativeRouter('/commonService/navBarControl', t, l);
+        },
+        navBarHidden(t, l) {
+          this.nativeRouter('/commonService/navBarHidden', t, l);
+        },
+        navBarVisibility(t, l) {
+          this.nativeRouter('/commonService/navBarVisibility', t, l);
+        },
+        orientationChange(t, l) {
+          this.nativeRouter('/commonBiz/orientationChange', t, l);
+        },
+        getStatusBarHeight(t, l) {
+          this.nativeRouter('/commonService/getStatusBarHeight', t, l);
+        },
+        checkApp(t, l) {
+          this.nativeRouter('/commonService/checkApp', t, l);
+        },
+        openApp(t, l) {
+          this.nativeRouter('/commonService/openApp', t, l);
+        },
+        openURLWithExternalBrowser(t, l) {
+          this.nativeRouter('/commonService/openURLWithExternalBrowser', t, l);
+        },
+        nativeGetAppVersion(t, l) {
+          this.nativeRouter('/commonService/nativeGetAppVersion', t, l);
+        },
+        nativeSaveImageToGallery(t, l) {
+          this.nativeRouter('/commonService/nativeSaveImageToGallery', t, l);
+        },
+      };
+    })(),
       o = (function () {
         return {
           previewBack(t) {
@@ -1972,19 +1972,19 @@ window.SMGNativeJS || (window.SMGNativeJS = le);
 const Lt = le.isGtApp();
 if (!Lt) {
   const a = document.createElement('script');
-  (a.src = '/appzwpt/appthirdpartynative.js'),
+  (a.src = '/3rd/appzwpt/appthirdpartynative.js'),
     document.head.appendChild(a),
     (a.onload = () => {
       console.log('appthirdpartynative 加载完成');
     });
 }
 const kt = {
-    versions: (function () {
-      const a = navigator.userAgent;
-      return { ios: !!a.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), android: a.indexOf('Android') > -1 };
-    })(),
-    language: (navigator.browserLanguage || navigator.language).toLowerCase(),
-  },
+  versions: (function () {
+    const a = navigator.userAgent;
+    return { ios: !!a.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), android: a.indexOf('Android') > -1 };
+  })(),
+  language: (navigator.browserLanguage || navigator.language).toLowerCase(),
+},
   Cr = (kt.versions.ios, 'alipays://'),
   Jr = [
     { typeName: '拨打电话', type: 'callPhone', params: { data: '15156024260' }, callResult: '' },
@@ -2086,7 +2086,7 @@ const $r = document.getElementById('nativejs.tbody'),
       f = Jr[c],
       b = document.querySelector(`p[tdplocation="${c}"]`);
     if (f.type === 'webBrowser') {
-      le.commonuseTypes.webBrowser(f.params, (O, w, S) => {});
+      le.commonuseTypes.webBrowser(f.params, (O, w, S) => { });
       return;
     }
     const d = f.type === 'nativeRouter' ? f.params.routePath : `/commonService/${f.type}`,
